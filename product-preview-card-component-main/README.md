@@ -13,5 +13,5 @@ And i'm also thankful to my bud Dany
 
 Make sure to check their github
 
-> https://github.com/7-Dany
-> https://github.com/kevin-powell
+> - https://github.com/7-Dany
+> - https://github.com/kevin-powell
