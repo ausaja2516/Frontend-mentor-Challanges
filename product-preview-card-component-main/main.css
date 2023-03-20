@@ -1,0 +1,125 @@
+/* custom properties */
+
+:root {
+  --clr-primary-400: hsl(158, 36%, 37%);
+  --clr-primary-700: hsl(158, 36%, 20%);
+  --clr-primary-200: hsl(30, 38%, 92%);
+
+  --clr-neutral-900: hsl(212, 21%, 14%);
+  --clr-neutral-400: hsl(228, 12%, 48%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-mont: "Montserrat", sans-serif;
+  --ff-fraun: "Fraunces", serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+/* Css reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+picture,
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* general styling */
+
+body {
+  line-height: 1.5;
+
+  font-family: var(--ff-mont);
+  font-weight: var(--fw-regular);
+  font-size: 0.9rem;
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-primary-200);
+
+  display: grid;
+  place-items: center;
+  margin: 2rem;
+}
+
+/* product styling */
+
+.product {
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+@media (min-width: 600px) {
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .btn {
+    margin-bottom: -1rem;
+    height: 4em;
+  }
+}
+
+.product__content {
+  padding: 1.25rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.product__category {
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.product__heading {
+  font-family: var(--ff-fraun);
+  color: var(--clr-neutral-900);
+
+  line-height: 1;
+}
+
+.product__pricing {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.cutoff__price {
+  font-family: var(--ff-fraun);
+  font-size: 1.75rem;
+  color: var(--clr-primary-400);
+}
+.original__price {
+  font-size: 0.75rem;
+  text-decoration: line-through;
+}
+.btn {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  padding: 1em 2.5em;
+  border: 0;
+  border-radius: 0.5rem;
+  font-family: var(--ff-mont);
+  font-weight: var(--fw-bold);
+  font-size: 0.75rem;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--clr-primary-700);
+}
